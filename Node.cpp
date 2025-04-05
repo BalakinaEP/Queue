@@ -5,6 +5,10 @@ Node::Node()
 	next = nullptr;
 }
 
+Node::~Node()
+{
+}
+
 Node* Node::getNext() const
 {
 	return next;

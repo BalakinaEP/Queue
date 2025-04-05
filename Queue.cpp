@@ -9,6 +9,12 @@ Queue::Queue()
 
 Queue::~Queue()
 {
+	while (!isEmpty())
+	{
+		Node* temp = head;
+		head = head->getNext();
+		delete temp;
+	}
 }
 
 bool Queue::isEmpty() const
