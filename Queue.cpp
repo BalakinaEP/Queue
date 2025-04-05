@@ -11,9 +11,14 @@ Queue::~Queue()
 {
 	while (!isEmpty())
 	{
+		size--;
 		Node* temp = head;
 		head = head->getNext();
 		delete temp;
+		if (size == 0)
+		{
+			tail = nullptr;
+		}
 	}
 }
 
